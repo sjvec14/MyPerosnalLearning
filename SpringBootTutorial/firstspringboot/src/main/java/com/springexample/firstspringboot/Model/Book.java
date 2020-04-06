@@ -1,7 +1,18 @@
 package com.springexample.firstspringboot.Model;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+//sample ip
+/*{
+        "id": 1,
+        "name": " Java Basics"
+        }*/
+@Entity
 public class Book {
 
+    @Id
     private Long id;
     private String name;
 
