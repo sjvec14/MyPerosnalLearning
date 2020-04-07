@@ -1,0 +1,66 @@
+13:44:23,803 DEBUG SQL:127 - create table hibernate_sequence (next_val bigint) type=MyISAM
+13:44:23,860 DEBUG SQL:127 - insert into hibernate_sequence values ( 1 )
+13:44:23,881 DEBUG SQL:127 - create table Person (id bigint not null, city varchar(255), street varchar(255), zipcode varchar(255), name varchar(255) not null, primary key (id)) type=MyISAM
+13:44:24,071 DEBUG SQL:127 - select next_val as id_val from hibernate_sequence for update
+13:45:22,237 DEBUG SQL:127 - create table hibernate_sequence (next_val bigint) type=MyISAM
+13:45:22,256 DEBUG SQL:127 - insert into hibernate_sequence values ( 1 )
+13:45:22,261 DEBUG SQL:127 - create table Person (id bigint not null, city varchar(255), street varchar(255), zipcode varchar(255), name varchar(255) not null, primary key (id)) type=MyISAM
+13:45:22,408 DEBUG SQL:127 - select next_val as id_val from hibernate_sequence for update
+13:46:10,009 DEBUG SQL:127 - create table Person (id bigint not null auto_increment, city varchar(255), street varchar(255), zipcode varchar(255), name varchar(255) not null, primary key (id)) type=MyISAM
+13:46:10,164 DEBUG SQL:127 - insert into Person (city, street, zipcode, name) values (?, ?, ?, ?)
+13:46:10,169 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Seattle]
+13:46:10,170 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [200 E Main St]
+13:46:10,170 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [85123]
+13:46:10,171 TRACE BasicBinder:64 - binding parameter [4] as [VARCHAR] - [Ruby]
+13:48:12,682 DEBUG SQL:127 - create table Person (id bigint not null auto_increment, city varchar(255), street varchar(255), zipcode varchar(255), name varchar(255) not null, primary key (id)) type=MyISAM
+13:48:12,864 DEBUG SQL:127 - insert into Person (city, street, zipcode, name) values (?, ?, ?, ?)
+13:48:12,869 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Seattle]
+13:48:12,870 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [200 E Main St]
+13:48:12,870 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [85123]
+13:48:12,871 TRACE BasicBinder:64 - binding parameter [4] as [VARCHAR] - [Ruby]
+13:49:34,814 DEBUG SQL:127 - create table person (id bigint not null auto_increment, city varchar(255), street varchar(255), zipcode varchar(255), name varchar(255) not null, primary key (id)) type=MyISAM
+13:49:34,997 DEBUG SQL:127 - insert into person (city, street, zipcode, name) values (?, ?, ?, ?)
+13:49:35,001 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Seattle]
+13:49:35,002 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [200 E Main St]
+13:49:35,003 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [85123]
+13:49:35,003 TRACE BasicBinder:64 - binding parameter [4] as [VARCHAR] - [Ruby]
+13:52:01,724 DEBUG SQL:127 - create table Person (id bigint not null auto_increment, city varchar(255), street varchar(255), zipcode varchar(255), name varchar(255) not null, primary key (id)) type=MyISAM
+13:52:01,904 DEBUG SQL:127 - insert into Person (city, street, zipcode, name) values (?, ?, ?, ?)
+13:52:01,909 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Seattle]
+13:52:01,909 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [200 E Main St]
+13:52:01,910 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [85123]
+13:52:01,910 TRACE BasicBinder:64 - binding parameter [4] as [VARCHAR] - [Ruby]
+13:57:51,484 DEBUG SQL:127 - create table Person (id bigint not null auto_increment, city varchar(255), street varchar(255), zipcode varchar(255), name varchar(255) not null, primary key (id)) engine=InnoDB
+13:57:51,772 DEBUG SQL:127 - insert into Person (city, street, zipcode, name) values (?, ?, ?, ?)
+13:57:51,777 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Seattle]
+13:57:51,778 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [200 E Main St]
+13:57:51,778 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [85123]
+13:57:51,780 TRACE BasicBinder:64 - binding parameter [4] as [VARCHAR] - [Ruby]
+14:03:12,618 DEBUG SQL:127 - alter table Person add column add_city varchar(255)
+14:03:12,916 DEBUG SQL:127 - alter table Person add column add_street varchar(255)
+14:03:13,017 DEBUG SQL:127 - alter table Person add column add_zipcode varchar(255)
+14:03:13,171 DEBUG SQL:127 - insert into Person (add_city, add_street, add_zipcode, name) values (?, ?, ?, ?)
+14:03:13,180 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Seattle]
+14:03:13,181 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [100 A Main St]
+14:03:13,181 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [85021]
+14:03:13,181 TRACE BasicBinder:64 - binding parameter [4] as [VARCHAR] - [Diamond]
+14:04:36,980 DEBUG SQL:127 - create table Person (id bigint not null auto_increment, add_city varchar(255), add_street varchar(255), add_zipcode varchar(255), name varchar(255) not null, primary key (id)) engine=InnoDB
+14:04:37,264 DEBUG SQL:127 - insert into Person (add_city, add_street, add_zipcode, name) values (?, ?, ?, ?)
+14:04:37,268 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Seattle]
+14:04:37,269 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [100 A Main St]
+14:04:37,269 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [85021]
+14:04:37,270 TRACE BasicBinder:64 - binding parameter [4] as [VARCHAR] - [Diamond]
+14:14:01,556 DEBUG SQL:127 - insert into Person (add_city, add_street, add_zipcode, name) values (?, ?, ?, ?)
+14:14:01,584 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Seattle]
+14:14:01,585 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [100 A Main St]
+14:14:01,586 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [85021]
+14:14:01,587 TRACE BasicBinder:64 - binding parameter [4] as [VARCHAR] - [Diamond]
+14:14:06,224 DEBUG SQL:127 - select person0_.id as id1_0_0_, person0_.add_city as add_city2_0_0_, person0_.add_street as add_stre3_0_0_, person0_.add_zipcode as add_zipc4_0_0_, person0_.name as name5_0_0_ from Person person0_ where person0_.id=?
+14:14:06,228 TRACE BasicBinder:64 - binding parameter [1] as [BIGINT] - [1]
+14:26:05,684 DEBUG SQL:127 - insert into Person (add_city, add_street, add_zipcode, name) values (?, ?, ?, ?)
+14:26:05,701 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Seattle]
+14:26:05,702 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [100 A Main St]
+14:26:05,703 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [85021]
+14:26:05,703 TRACE BasicBinder:64 - binding parameter [4] as [VARCHAR] - [Diamond]
+14:26:05,748 DEBUG SQL:127 - select person0_.id as id1_0_0_, person0_.add_city as add_city2_0_0_, person0_.add_street as add_stre3_0_0_, person0_.add_zipcode as add_zipc4_0_0_, person0_.name as name5_0_0_ from Person person0_ where person0_.id=?
+14:26:05,749 TRACE BasicBinder:64 - binding parameter [1] as [BIGINT] - [1]

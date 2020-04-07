@@ -1,0 +1,216 @@
+14:27:49,285 DEBUG SQL:127 - 
+    
+    create table Guide (
+       id bigint not null auto_increment,
+        name varchar(255),
+        salary integer,
+        staff_id varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+14:27:49,587 DEBUG SQL:127 - 
+    
+    create table Student (
+       id bigint not null auto_increment,
+        enrollment_id varchar(255) not null,
+        name varchar(255),
+        guide_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+14:27:49,623 DEBUG SQL:127 - 
+    
+    alter table Student 
+       add constraint FKb4ny3l3cnsxbbn601ev8mhlj5 
+       foreign key (guide_id) 
+       references Guide (id)
+14:27:49,759 DEBUG SQL:127 - 
+    insert 
+    into
+        Guide
+        (name, salary, staff_id) 
+    values
+        (?, ?, ?)
+14:27:49,764 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Mike Lawson]
+14:27:49,765 TRACE BasicBinder:64 - binding parameter [2] as [INTEGER] - [1000]
+14:27:49,766 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [2000MO10789]
+14:27:49,774 DEBUG SQL:127 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, name) 
+    values
+        (?, ?, ?)
+14:27:49,775 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014JT50123]
+14:27:49,776 TRACE BasicBinder:64 - binding parameter [2] as [BIGINT] - [1]
+14:27:49,776 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [John Smith]
+14:28:56,837 DEBUG SQL:127 - 
+    
+    create table Guide (
+       id bigint not null auto_increment,
+        name varchar(255),
+        salary integer,
+        staff_id varchar(255) not null,
+        primary key (id)
+    ) engine=InnoDB
+14:28:57,034 DEBUG SQL:127 - 
+    
+    create table Student (
+       id bigint not null auto_increment,
+        enrollment_id varchar(255) not null,
+        name varchar(255),
+        guide_id bigint,
+        primary key (id)
+    ) engine=InnoDB
+14:28:57,158 DEBUG SQL:127 - 
+    
+    alter table Student 
+       add constraint FKb4ny3l3cnsxbbn601ev8mhlj5 
+       foreign key (guide_id) 
+       references Guide (id)
+14:28:57,294 DEBUG SQL:127 - 
+    insert 
+    into
+        Guide
+        (name, salary, staff_id) 
+    values
+        (?, ?, ?)
+14:28:57,297 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [Mike Lawson]
+14:28:57,298 TRACE BasicBinder:64 - binding parameter [2] as [INTEGER] - [1000]
+14:28:57,299 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [2000MO10789]
+14:28:57,331 DEBUG SQL:127 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, name) 
+    values
+        (?, ?, ?)
+14:28:57,332 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014JT50123]
+14:28:57,333 TRACE BasicBinder:64 - binding parameter [2] as [BIGINT] - [1]
+14:28:57,333 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [John Smith]
+14:34:06,908 DEBUG SQL:127 - 
+    
+    alter table Student 
+       add constraint FKb4ny3l3cnsxbbn601ev8mhlj5 
+       foreign key (guide_id) 
+       references Guide (id)
+14:34:32,634 DEBUG SQL:127 - 
+    insert 
+    into
+        Guide
+        (name, salary, staff_id) 
+    values
+        (?, ?, ?)
+14:34:32,646 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [jeff]
+14:34:32,649 TRACE BasicBinder:64 - binding parameter [2] as [INTEGER] - [10000]
+14:34:32,650 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [1000MO105140]
+14:34:32,822 DEBUG SQL:127 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, name) 
+    values
+        (?, ?, ?)
+14:34:32,826 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014JT50014]
+14:34:32,828 TRACE BasicBinder:64 - binding parameter [2] as [BIGINT] - [2]
+14:34:32,829 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [James bond]
+14:34:36,104 DEBUG SQL:127 - 
+    select
+        student0_.id as id1_1_0_,
+        student0_.enrollment_id as enrollme2_1_0_,
+        student0_.guide_id as guide_id4_1_0_,
+        student0_.name as name3_1_0_,
+        guide1_.id as id1_0_1_,
+        guide1_.name as name2_0_1_,
+        guide1_.salary as salary3_0_1_,
+        guide1_.staff_id as staff_id4_0_1_ 
+    from
+        Student student0_ 
+    left outer join
+        Guide guide1_ 
+            on student0_.guide_id=guide1_.id 
+    where
+        student0_.id=?
+14:34:36,107 TRACE BasicBinder:64 - binding parameter [1] as [BIGINT] - [1]
+14:35:55,651 DEBUG SQL:127 - 
+    
+    alter table Student 
+       add constraint FKb4ny3l3cnsxbbn601ev8mhlj5 
+       foreign key (guide_id) 
+       references Guide (id)
+14:36:02,463 DEBUG SQL:127 - 
+    insert 
+    into
+        Guide
+        (name, salary, staff_id) 
+    values
+        (?, ?, ?)
+14:36:02,474 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [jeff]
+14:36:02,476 TRACE BasicBinder:64 - binding parameter [2] as [INTEGER] - [10000]
+14:36:02,477 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [1000MO105140]
+14:36:05,964 DEBUG SQL:127 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, name) 
+    values
+        (?, ?, ?)
+14:36:05,977 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014JT50014]
+14:36:05,984 TRACE BasicBinder:64 - binding parameter [2] as [BIGINT] - [3]
+14:36:05,987 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [James bond]
+14:36:07,132 DEBUG SQL:127 - 
+    select
+        student0_.id as id1_1_0_,
+        student0_.enrollment_id as enrollme2_1_0_,
+        student0_.guide_id as guide_id4_1_0_,
+        student0_.name as name3_1_0_,
+        guide1_.id as id1_0_1_,
+        guide1_.name as name2_0_1_,
+        guide1_.salary as salary3_0_1_,
+        guide1_.staff_id as staff_id4_0_1_ 
+    from
+        Student student0_ 
+    left outer join
+        Guide guide1_ 
+            on student0_.guide_id=guide1_.id 
+    where
+        student0_.id=?
+14:36:07,137 TRACE BasicBinder:64 - binding parameter [1] as [BIGINT] - [1]
+14:45:52,091 DEBUG SQL:127 - 
+    
+    alter table Student 
+       add constraint FKb4ny3l3cnsxbbn601ev8mhlj5 
+       foreign key (guide_id) 
+       references Guide (id)
+14:45:55,073 DEBUG SQL:127 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, name) 
+    values
+        (?, ?, ?)
+14:45:55,079 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014JT50014]
+14:45:55,080 TRACE BasicBinder:52 - binding parameter [2] as [BIGINT] - [null]
+14:45:55,083 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [hulk]
+14:45:57,174 DEBUG SQL:127 - 
+    insert 
+    into
+        Student
+        (enrollment_id, guide_id, name) 
+    values
+        (?, ?, ?)
+14:45:57,177 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014JT50028]
+14:45:57,178 TRACE BasicBinder:52 - binding parameter [2] as [BIGINT] - [null]
+14:45:57,204 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [iron man]
+14:46:07,868 DEBUG SQL:127 - 
+    delete 
+    from
+        Student 
+    where
+        id=?
+14:46:07,869 TRACE BasicBinder:64 - binding parameter [1] as [BIGINT] - [4]
+14:46:07,950 DEBUG SQL:127 - 
+    delete 
+    from
+        Student 
+    where
+        id=?
+14:46:07,955 TRACE BasicBinder:64 - binding parameter [1] as [BIGINT] - [5]
