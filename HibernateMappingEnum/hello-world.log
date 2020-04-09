@@ -1,0 +1,94 @@
+13:48:43,127 DEBUG SQL:127 - 
+    
+    create table Employee (
+       id bigint not null auto_increment,
+        employee_id varchar(255),
+        employee_status integer,
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+13:48:43,255 DEBUG SQL:127 - 
+    
+    alter table Employee 
+       drop index UK_cf4wn3bk1oilnqja9pbd7eufk
+13:48:43,273 DEBUG SQL:127 - 
+    
+    alter table Employee 
+       add constraint UK_cf4wn3bk1oilnqja9pbd7eufk unique (employee_id)
+13:48:43,517 DEBUG SQL:127 - 
+    insert 
+    into
+        Employee
+        (employee_id, employee_status, name) 
+    values
+        (?, ?, ?)
+13:48:43,521 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014JA11001]
+13:48:43,522 TRACE BasicBinder:64 - binding parameter [2] as [INTEGER] - [0]
+13:48:43,523 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [Josh Stockham]
+13:48:43,530 DEBUG SQL:127 - 
+    insert 
+    into
+        Employee
+        (employee_id, employee_status, name) 
+    values
+        (?, ?, ?)
+13:48:43,531 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014AI21543]
+13:48:43,532 TRACE BasicBinder:64 - binding parameter [2] as [INTEGER] - [1]
+13:48:43,532 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [Ammie Corrio]
+13:48:43,535 DEBUG SQL:127 - 
+    insert 
+    into
+        Employee
+        (employee_id, employee_status, name) 
+    values
+        (?, ?, ?)
+13:48:43,536 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014ET25100]
+13:48:43,536 TRACE BasicBinder:64 - binding parameter [2] as [INTEGER] - [2]
+13:48:43,536 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [Ernie Stenseth]
+13:49:49,455 DEBUG SQL:127 - 
+    
+    create table Employee (
+       id bigint not null auto_increment,
+        employee_id varchar(255),
+        employee_status varchar(255),
+        name varchar(255),
+        primary key (id)
+    ) engine=InnoDB
+13:49:49,745 DEBUG SQL:127 - 
+    
+    alter table Employee 
+       drop index UK_cf4wn3bk1oilnqja9pbd7eufk
+13:49:49,771 DEBUG SQL:127 - 
+    
+    alter table Employee 
+       add constraint UK_cf4wn3bk1oilnqja9pbd7eufk unique (employee_id)
+13:49:50,016 DEBUG SQL:127 - 
+    insert 
+    into
+        Employee
+        (employee_id, employee_status, name) 
+    values
+        (?, ?, ?)
+13:49:50,018 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014JA11001]
+13:49:50,019 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [FULL_TIME]
+13:49:50,020 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [Josh Stockham]
+13:49:50,026 DEBUG SQL:127 - 
+    insert 
+    into
+        Employee
+        (employee_id, employee_status, name) 
+    values
+        (?, ?, ?)
+13:49:50,027 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014AI21543]
+13:49:50,028 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [PART_TIME]
+13:49:50,028 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [Ammie Corrio]
+13:49:50,030 DEBUG SQL:127 - 
+    insert 
+    into
+        Employee
+        (employee_id, employee_status, name) 
+    values
+        (?, ?, ?)
+13:49:50,030 TRACE BasicBinder:64 - binding parameter [1] as [VARCHAR] - [2014ET25100]
+13:49:50,031 TRACE BasicBinder:64 - binding parameter [2] as [VARCHAR] - [CONTRACT]
+13:49:50,031 TRACE BasicBinder:64 - binding parameter [3] as [VARCHAR] - [Ernie Stenseth]
