@@ -1,3 +1,4 @@
+/*
 package com.tracker.covid19.covidtracker.configs;
 
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -20,3 +21,4 @@ public class DataSourceConfig {
         return dataSourceBuilder.build();
     }
 }
+*/
