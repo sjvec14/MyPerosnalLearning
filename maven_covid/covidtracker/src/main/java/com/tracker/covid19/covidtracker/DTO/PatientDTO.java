@@ -1,14 +1,21 @@
 package com.tracker.covid19.covidtracker.DTO;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.hibernate.validator.constraints.Range;
 
+import javax.validation.Valid;
+import javax.validation.constraints.*;
 import java.time.LocalDateTime;
 
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class PatientDTO {
     private int Id;
+    @Range(min=1, message = "The patient ID should not be null or less than 1")
     private int patientId;
+    @Valid
     private CountryDTO country;
+    @NotNull(message = "The patientName should not be Null")
+    @Size(max = 20, message = "The patientName size should not be greater than 20")
     private String name;
     private LocalDateTime infectedTimeStamp;
 
