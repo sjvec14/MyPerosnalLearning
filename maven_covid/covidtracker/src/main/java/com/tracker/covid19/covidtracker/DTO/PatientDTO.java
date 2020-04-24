@@ -22,6 +22,15 @@ public class PatientDTO {
     public PatientDTO() {
     }
 
+    public PatientDTO(int id, int patientId, CountryDTO country, String name, LocalDateTime infectedTimeStamp) {
+        this.Id = id;
+        this.patientId = patientId;
+        this.country = country;
+        this.name = name;
+        this.infectedTimeStamp = infectedTimeStamp;
+    }
+
+
     public int getId() {
         return Id;
     }

@@ -17,7 +17,8 @@ import java.util.Optional;
 public class PatientService {
 
     @Autowired
-    ICountryRepository countryRepository;
+    ICountryRepository countryRepository
+            ;
 
     @Autowired
     IPatientRepository patientRepository;

@@ -30,13 +30,16 @@ public class MapperService {
 
     public CountryDTO mapCountryEntityToResponse(Country country, boolean mapPatientDetails) {
 
-        CountryDTO countryResponse = new CountryDTO();
-        countryResponse.setCountryId(country.getCountryId());
-        countryResponse.setCountyName(country.getCountyName());
-        if (mapPatientDetails) {
-            countryResponse.setPatientSet(mapPatientEntityToResponse(country.getPatientSet()));
+        if (country != null) {
+            CountryDTO countryResponse = new CountryDTO();
+            countryResponse.setCountryId(country.getCountryId());
+            countryResponse.setCountyName(country.getCountyName());
+            if (mapPatientDetails) {
+                countryResponse.setPatientSet(mapPatientEntityToResponse(country.getPatientSet()));
+            }
+            return countryResponse;
         }
-        return countryResponse;
+        return null;
     }
 
     private Set<PatientDTO> mapPatientEntityToResponse(Set<Patient> patientSet) {
@@ -66,8 +69,8 @@ public class MapperService {
         Country countryEntity = new Country();
         countryEntity.setCountyName(country.getCountyName());
         countryEntity.setCountryId(country.getCountryId());
-       // countryEntity.setPatientSet(mapPatientDTOToEntity(country.getPatientSet()));
-        mapPatientDTOToEntity(country,countryEntity);
+        // countryEntity.setPatientSet(mapPatientDTOToEntity(country.getPatientSet()));
+        mapPatientDTOToEntity(country, countryEntity);
         return countryEntity;
     }
 
@@ -82,19 +85,7 @@ public class MapperService {
             patient.getCountry().setCountyName(country.getCountyName());
             patient.getCountry().setPatientSet(new HashSet<>());
             return patient;
-        }).forEach(countryEntity.getPatientSet():: add);
+        }).forEach(countryEntity.getPatientSet()::add);
     }
-
-    /*private Set<Patient> mapPatientDTOToEntity(Set<PatientDTO> patientSet) {
-        return patientSet.stream().map(patientDTO -> {
-            Patient patient = new Patient();
-            patient.setPatientId(patientDTO.getPatientId());
-            patient.setName(patientDTO.getName());
-            patient.setInfectedTimeStamp(LocalDateTime.now());
-            return patient;
-        }).collect(Collectors.toSet());
-
-
-    }*/
 
 }
